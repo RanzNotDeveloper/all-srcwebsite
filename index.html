@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TKI 2 — Teknik Kimia Industri 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="lab-bg" id="labBg" aria-hidden="true"></div>
+  <div class="glass-overlay" aria-hidden="true"></div>
+
+  <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="menu-head">
+      <span class="menu-title">Menu</span>
+      <button class="menu-close" id="menuClose" aria-label="Tutup menu">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="#hero" data-nav>Beranda</a></li>
+      <li><a href="#struktur" data-nav>Struktur Kelas</a></li>
+      <li><a href="#jadwal" data-nav>Jadwal Pelajaran</a></li>
+      <li><a href="#galeri" data-nav>Galeri Kelas</a></li>
+      <li><button class="menu-playlist" id="openPlaylist" type="button">Playlist Lagu</button></li>
+    </ul>
+  </nav>
+  <div class="menu-scrim" id="menuScrim"></div>
+
+  <header class="hero" id="hero">
+    <h1 class="title-main">TKI 2</h1>
+    <h2 class="title-sub">TEKNIK KIMIA INDUSTRI 2</h2>
+
+    <div class="cta-row">
+      <a class="cta-table" href="https://whatsapp.com/channel/0029Vb8HYlv0AgWKUYEMWE3u/" target="_blank" rel="noopener">
+        <span class="cta-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg>
+        </span>
+        <span class="cta-label">Saluran Kelas</span>
+      </a>
+      <a class="cta-table" href="https://tiktok.com/@tkitwo29" target="_blank" rel="noopener">
+        <span class="cta-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M14 4v9.2a3.4 3.4 0 1 1-3.4-3.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M14 4c.4 2.4 2 4 4.4 4.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <span class="cta-label">TikTok Kelas</span>
+      </a>
+    </div>
+
+    <p class="quote-hero">Kita bukan cuma sekelas, kita satu tim. Pelan boleh, yang penting bareng-bareng terus.</p>
+  </header>
+
+  <section class="section" id="struktur">
+    <h3 class="section-title">Struktur Kelas</h3>
+
+    <div class="wali-wrap">
+      <div class="person wali">
+        <span class="role">Wali Kelas</span>
+        <span class="name">Ganang Anggara Ade Putra, S.Pd.</span>
+      </div>
+    </div>
+
+    <div class="pengurus-row">
+      <div class="person">
+        <span class="role">Ketua Kelas</span>
+        <span class="name">Ditra Anggit Ajzwan Astama</span>
+      </div>
+      <div class="person">
+        <span class="role">Wakil Ketua</span>
+        <span class="name">Rizka Melinda</span>
+      </div>
+    </div>
+
+    <h4 class="sub-title">Anggota Kelas</h4>
+    <div class="anggota-grid" id="anggotaGrid"></div>
+  </section>
+
+  <section class="section" id="jadwal">
+    <h3 class="section-title">Jadwal Pembelajaran</h3>
+    <p class="jadwal-head">Kelas X TKI 2 — Semester Ganjil Tahun 2026/2027</p>
+    <div class="jadwal-grid" id="jadwalGrid"></div>
+  </section>
+
+  <section class="section motivasi">
+    <p class="motivasi-text">Belajar itu kayak titrasi, butuh sabar sampai warnanya berubah. Kalau hari ini belum paham, besok coba lagi. Yang penting jangan berhenti netesin usaha.</p>
+  </section>
+
+  <section class="section" id="galeri">
+    <h3 class="section-title">Galeri Kelas</h3>
+    <div class="galeri-grid" id="galeriGrid"></div>
+  </section>
+
+  <section class="section motivasi">
+    <p class="motivasi-text">Suatu hari nanti kita bakal kangen ributnya di kelas ini. Jadi selagi masih bareng, simpan momennya baik-baik, jangan cuma di galeri HP, tapi juga di kepala.</p>
+  </section>
+
+  <div class="playlist-modal" id="playlistModal" aria-hidden="true">
+    <div class="playlist-card glass">
+      <div class="playlist-head">
+        <span class="menu-title">Playlist Lagu</span>
+        <button class="menu-close" id="playlistClose" aria-label="Tutup playlist">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <ul class="playlist-list" id="playlistList"></ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 TKI 2 &mdash; 29</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
